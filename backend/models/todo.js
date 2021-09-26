@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 
+
 const toDoSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -9,9 +10,11 @@ const toDoSchema = new mongoose.Schema({
         maxlength: 200   
     },
     author: {
-        type: String
+        type: String,
+        minlength: 3,
+        maxlength: 30  
     },
-    uId:{
+    uid:{
         type: String
     },
     isComplete:{
